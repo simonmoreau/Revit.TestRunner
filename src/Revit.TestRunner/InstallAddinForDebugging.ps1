@@ -21,10 +21,10 @@
 ############################################################################################################
 
 param (
-    [string]$configuration = "Debug2018",
+    [string]$configuration = "Debug2022",
     [string]$projectName = "Revit.TestRunner",
-    [string]$addinSourceDir = "C:\Code\TFS\SE\Revit\Tools\Revit.TestRunner\Revit.TestRunner\",
-    [string]$targetPath = "C:\Code\TFS\SE\Revit\Tools\Revit.TestRunner\bin\Revit.TestRunner.dll"
+    [string]$addinSourceDir = "",
+    [string]$targetPath = ""
 )
 
 Write-Host "##### Run InstallAddinForDebuggingScript.ps1 #####"
@@ -88,7 +88,8 @@ $targetAddinFile = "{0}\{1}" -f $addinVersionPath, $addinFileName
 
 # Copy addin file to target path
 Write-Host "Install addin file "$targetAddinFile
-Copy-Item $sourceAddinFile -Destination $addinVersionPath
+Delete-I
+Copy-Item $sourceAddinFile -Destination $addinVersionPath -Force
 
 # Manipulate target addin File
 Write-Host "Executing assembly "$targetPath
