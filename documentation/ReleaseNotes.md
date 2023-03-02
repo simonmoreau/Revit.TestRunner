@@ -1,4 +1,9 @@
 # Release Notes
+* v1.3.8 [December 2022]
+    * Library update
+    * Small UI improvements
+
+
 * v1.3.7 [April 2022]
     * Support of Revit 2023
     * Console runner Revit language support
